@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main() 
+{
+ int i,l=0, P[10];
+ float N[10], som=0, c=0, Med ;
+
+ for(i=0; i<10; i++)
+ {
+    printf("Digite a nota dos aluno:");
+    scanf("%f",&N[i]);
+ }
+
+ for(i=0; i<10; i++)
+ {
+    if(N[i]>=6)
+    {
+    som=som+N[i];
+    c++;
+    }
+ }
+
+ Med= som/c;
+
+for(i=0; i<10; i++)
+{
+    if(N[i]>Med)
+    {
+        P[l]=i;
+        l++;
+    }
+}
+
+printf("Media dos Aprovados: %f\n", Med);
+for (i=0; i<l; i++)
+{
+    printf("%d  ",P[i]);
+}
+}
